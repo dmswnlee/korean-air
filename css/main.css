@@ -1,0 +1,797 @@
+/* COMMON */
+body {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #D9DBE1;
+}
+
+header .top-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 0 13px;
+}
+
+header .top-menu li {
+  display: flex;
+  margin-right: 20px;
+}
+
+header .top-menu li:hover {
+  outline: 1px solid #0064DE;
+  border-radius: 3px;
+}
+
+header .top-menu li:last-child{
+  margin-right: 0;
+}
+
+header .top-menu li a {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+header .top-menu li a span {
+  padding-right: 3px;
+  font-size: 13px;
+}
+
+header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+header .logo-group{
+  display: flex;
+}
+
+header .logo-group a .logo1 {
+  width: 162px;
+  height: 54px;
+}
+
+header .logo-group a .logo2 {
+  width: 38px;
+  height: 54px;
+}
+
+header .main-menu {
+  display: flex;
+}
+
+header .main-menu .item {
+  position: relative;
+}
+
+header .main-menu .item .item__name {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-weight: 700;
+}
+
+header .main-menu .item .item__name::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #00256c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+header .main-menu .item:hover .item__name::after {
+  display: block;
+}
+
+header .main-menu .item .item__contents {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+
+header .main-menu .item:hover .item__contents {
+  display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  width: 1100px;
+  background-color: #F8F9FC;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li{
+  width: 180px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 0 20px 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul ul li {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul ul li:last-child {
+  margin-bottom: 0;
+}
+
+header .main-menu .item .item__contents .contents__menu .contents__banner .banner__wrap {
+  position: relative;
+}
+
+header .main-menu .item .item__contents .contents__menu .contents__banner .banner__wrap:first-child {
+  margin-bottom: 20px;
+}
+
+header .main-menu .item .item__contents .contents__menu .contents__banner img {
+  width: 273px;
+  height: 145px;
+  border-radius: 5px;
+}
+
+header .main-menu .item .item__contents .contents__menu .contents__banner .banner__text {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  font-weight: 700;
+}
+
+header .last-menu {
+  display: flex;
+  align-items: center;
+}
+
+header .last-menu .search{
+  width: 213px;
+  height: 36px;
+  color: #767676;
+  background-color: #f3f4f8;
+  padding: 5px 10px 5px 16px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+
+header .last-menu .search span:last-child {
+  padding-left: 5px;
+  color: #333;
+}
+
+header .last-menu .login {
+  width: 64px;
+  height: 27px;
+  background-color: #00256c;
+  border-radius: 15px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .last-menu .login a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 3px 12px 4px;
+}
+
+/* Airline Ticket */
+.airline-ticket {
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/mainopen.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.airline-ticket .inner{
+  height: 250px;
+}
+
+.airline-ticket__tabMenu {
+  font-weight: 700;
+  display: flex;
+}
+
+.airline-ticket__tabMenu li {
+  width: 320px;
+  height: 50px;
+  background-color: #65728A;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.airline-ticket__tabMenu li a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.airline-ticket__tabMenu li:hover a{
+  border-color: #fff;
+}
+
+.airline-ticket__tabMenu .tabMenu--active {
+  background-color: #fff;
+}
+
+.airline-ticket__tabMenu .tabMenu--active:hover a{
+  border-color: #333;
+}
+
+.airline-ticket__tabMenu .tabMenu--active {
+  background-color: #fff;
+}
+
+.airline-ticket__tabMenu .tabMenu--active a {
+  color: #333;
+}
+
+.airline-ticket__contents {
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 20px 40px 10px;
+}
+
+.airline-ticket__contents .contents__menu {
+  display: flex;
+  align-items: center;
+}
+
+.airline-ticket__contents .contents__menu .booking-btn {
+  width: auto;
+  border: 1px solid #d9dbe1;
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.airline-ticket__contents .contents__menu .booking-btn li {
+  padding: 12px 24px;
+}
+
+.airline-ticket__contents .contents__menu .booking-btn .btn--active {
+  background-color: #00256c;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket {
+  display: flex;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket li {
+  color: #555;
+  padding: 0 14px;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket .menu--active {
+  color: #00256c;
+  font-weight: 700;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket .menu--active::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #DE001B;
+  display: block;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket li:hover {
+  outline: 1px solid #0064DE;
+  border-radius: 3px;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket li a {
+  display: flex;
+  align-items: center;
+  color: #555;
+}
+
+.airline-ticket__contents .contents__menu .trip-ticket span {
+  font-size: 14px;
+}
+
+.airline-ticket__contents .contents__user-info {
+  display: flex;
+}
+
+.contents__user-info .location {
+  display: flex;
+  align-items: center;
+}
+
+.contents__user-info .location > div{
+  padding: 20px;
+}
+
+.contents__user-info .location > div:hover {
+  outline: 1px solid #0064DE;
+  border-radius: 3px;
+}
+
+.contents__user-info .location span {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #767676;
+}
+
+.contents__user-info .location span:first-child {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contents__user-info > div {
+  padding: 20px 10px 20px 0;
+}
+
+.contents__user-info .user-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+
+.contents__user-info .user-info > div > span {
+  font-size: 14px;
+  color: #767676;
+  display: block;
+  margin: 3px 0 10px;
+}
+
+.contents__user-info .user-info > div div {
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.contents__user-info .user-info > div div:hover {
+  outline: 1px solid #0064DE;
+  border-radius: 3px;
+}
+
+.contents__user-info .user-info > div div span {
+  font-size: 16px;
+}
+
+.contents__user-info .user-info .departure-date {
+  width: 315px;
+}
+
+.contents__user-info .user-info .passengers {
+  width: 135px;
+}
+
+.contents__user-info .user-info .cabin-class {
+  width: 145px;
+}
+
+.contents__user-info .user-info button {
+  padding: 15px;
+  background-color: #00256c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+/* travel-info */
+.travel-info {
+  margin: 90px 0;
+}
+
+.travel-info .travel-info__card {
+  position: relative;
+  width: 345px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: inset -1px -1px 8px rgba(0,0,0,.1);
+}
+
+.travel-info .travel-info__card div img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.travel-info .travel-info__card p {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.travel-info .travel-info__card:hover img{
+  transform: scale(1.1);
+}
+
+.travel-info .travel-info__card:hover p {
+  text-decoration: underline;
+}
+
+.travel-info .swiper-prev,
+.travel-info .swiper-next {
+  width: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #000;
+  opacity: .6;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: auto;
+}
+
+.travel-info .swiper-prev{
+  left: 0;
+  padding: 5px 10px 5px 5px;
+  border-radius: 0 40px 40px 0;
+}
+
+.travel-info .swiper-next {
+  right: 2px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 40px 0 0 40px;
+}
+
+.travel-info .swiper-prev:hover,
+.travel-info .swiper-next:hover{
+  opacity: .7;
+}
+
+/* notice */
+.notice {
+  margin-bottom: 90px;
+}
+
+.notice .notice__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.notice .notice__title h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.notice .notice__title a {
+  font-size: 14px;
+  color: #555;
+}
+
+.notice .notice__title a:hover {
+  outline: 1px solid #0064DE;
+  border-radius: 3px;
+}
+
+.notice .notice__list {
+  display: flex;
+}
+
+.notice .notice__list img {
+  width: 500px;
+  height: 293px;
+  border-radius: 15px;
+}
+
+.notice .notice__list ul li {
+  width: 550px;
+  padding: 24px 0;
+  margin-right: 50px;
+  border-top: 1px solid #D9DBE1;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.notice .notice__list ul li:hover p {
+  text-decoration: underline;
+}
+
+.notice .notice__list ul li span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #767676;
+}
+
+.notice .notice__list ul li:last-child {
+  border-bottom: 1px solid #D9DBE1;
+}
+
+/* travel-guide */
+.travel-guide {
+  padding: 40px;
+  background-color: #D0E7F6;
+  border-bottom: 1px solid #D9DBE1;
+}
+
+.travel-guide .inner.on {
+  padding-bottom: 60px;
+  transition: .3s;
+}
+
+.travel-guide h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.travel-guide .guide__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.travel-guide .guide__wrap .guide__contents {
+  position: relative;
+  width: 130px;
+  padding: 20px;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travel-guide .guide__wrap .guide__contents p {
+  margin-bottom: 20px;
+}
+
+.travel-guide .guide__wrap .guide__contents img {
+  width: 40px;
+  height: 40px;
+}
+
+.travel-guide .guide__wrap .guide__contents div {
+  position: absolute;
+  bottom: -70px;
+  display: none;
+  padding: 14px 24px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.travel-guide .guide__wrap .guide__contents div::after {
+  content: "";
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  margin: auto;
+  border-width: 0 8px 10px;
+  border-color: #fff transparent;
+  position: absolute;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+
+.travel-guide .guide__wrap .guide__contents div a {
+  font-size: 14px;
+  display: block;
+  margin-right: 4px;
+}
+
+.travel-guide .guide__wrap .guide__contents:hover {
+  background-color: #fff;
+}
+
+.travel-guide .guide__wrap .guide__contents:hover p {
+  text-decoration: underline;
+}
+
+.travel-guide .guide__wrap .guide__contents:hover div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
+
+.travel-guide .guide__wrap .guide__contents:hover div a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  width: 1px;
+  height: 12px;
+  background-color: #d9dbe1;
+  transform: translateY(-50%);
+}
+
+/* lnb */
+.lnb {
+  padding: 40px;
+  background-color: #F3F4F8;
+}
+
+.lnb .inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lnb .lnb__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lnb .lnb__menu > li {
+  width: 200px;
+}
+
+.lnb .lnb__menu > li h5 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.lnb .lnb__menu > li ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.lnb .lnb__menu > li ul li:hover {
+  text-decoration: underline;
+}
+
+.lnb .lnb__banner .sns {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.lnb .lnb__banner .app-store {
+  display: flex;
+}
+
+.lnb .lnb__banner .app-store li:first-child {
+  margin-right: 10px;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+}
+
+footer .company-info {
+  margin-bottom: 20px;
+}
+
+footer .company-info span {
+  position: relative;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  display: inline-block;
+  margin: 0 6px;
+  
+}
+
+footer .company-info h5 {
+  color: #00256c;
+  font-weight: 700;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+footer .company-info span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  width: 1px;
+  height: 12px;
+  background-color: #d9dbe1;
+  transform: translateY(-50%);
+}
+
+footer .company-info .blind::after {
+  display: none;
+}
+
+footer .copyright {
+  color: #555;
+  font-size: 14px;
+}
+
+/* top-btn */
+#top-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.15);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 120px;
+  right: 40px;
+  cursor: pointer;
+}
+
+#top-btn span  {
+  font-size: 32px;
+}
+
+#floating_btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #0064de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+#floating_btn span {
+  font-size: 32px;
+  color: #fff;
+}
+

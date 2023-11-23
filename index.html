@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대한항공</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- lodash & GSAP & ScrollToPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" integrity="sha512-v/m68W+vaGN/6igoyFpd4GlQzu0jx9/n5gr2PKq5vif+RObyGKHse384YHrOULaxZ810XhlHUrmB3U8UnPB19Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+      <ul class="top-menu">
+        <li>
+          <a href="javascript:void(0)">
+            <span class="material-symbols-outlined">featured_seasonal_and_gifts</span>
+            이벤트
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="material-symbols-outlined">question_mark</span>
+            자주 묻는 질문
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="material-symbols-outlined">public</span>
+            언어 선택
+          </a>
+        </li>
+      </ul>
+
+      <div class="menu">
+        <div class="logo-group">
+          <a href="/">
+            <img src="./images/koreanair-logo.png" alt="koreanAir" class="logo1"/>
+          </a>
+          <a href="javascript:void(0)">
+            <img src="./images/koreanair_skyteam-logo.png" alt="skyTeam" class="logo2"/>
+          </a>
+        </div>
+
+        <ul class="main-menu">
+          <li class="item">
+            <div class="item__name">
+              예약
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul>
+                  <li>
+                    <h4>예약 가이드</h4>
+                    <ul>
+                      <li>운임 안내</li>
+                      <li>좌석 승급</li>
+                      <li>변경 및 환불</li>
+                      <li>온라인 결제</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>부가 서비스</h4>
+                    <ul>
+                      <li>대한항공 서비스</li>
+                      <li>제휴 서비스</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>유용한 정보</h4>
+                    <ul>
+                      <li>보너스 좌석 상황 보기</li>
+                      <li>운항 노선도</li>
+                      <li>공동운항</li>
+                      <li>환승 전용 내항기</li>
+                      <li>최저가 항공권</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="contents__banner">
+                  <div class="banner__wrap">
+                    <img src="./images/booking_pc.jpg" alt="항공권 예매하러 가기" />
+                    <div class="banner__text">
+                      <span>항공권 예매하러 가기</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                  <div class="banner__wrap">
+                    <img src="./images/awardseat_pc.jpg" alt="보너스 좌석 상황 보기" />
+                    <div class="banner__text">
+                      <span>보너스 좌석 상황 보기</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">
+              공항
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul>
+                  <li>
+                    <h4>체크인</h4>
+                    <ul>
+                      <li>사전 체크인</li>
+                      <li>공항 체크인</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>탑승 절차</h4>
+                    <ul>
+                      <li>탑승 절차 안내</li>
+                      <li>SkyPriority</li>
+                      <li>출입국 규정 정보</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>공항 이용 가이드</h4>
+                    <ul>
+                      <li>보너스 좌석 상황 보기</li>
+                      <li>인천국제공항</li>
+                      <li>취항지 공항 정보</li>
+                      <li>KAL라운지</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>수하물</h4>
+                    <ul>
+                      <li>수하물 안내</li>
+                      <li>운송 제한 물품</li>
+                      <li>휴대 수하물</li>
+                      <li>위탁 수하물</li>
+                      <li>지연, 파손 및 유실물</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>도움이 필요한 승객</h4>
+                    <ul>
+                      <li>한가족 서비스</li>
+                      <li>유아 동반 승객</li>
+                      <li>혼자 여행하는 어린이</li>
+                      <li>몸이 불편한 승객</li>
+                      <li>임신 중인 승객</li>
+                      <li>반려동물 동반 승객</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>엑설런트 프로그램</h4>
+                    <ul>
+                      <li>엑설런트 보딩패스</li>
+                      <li>엑설런트 트랜짓 프로그램</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="contents__banner">
+                  <div class="banner__wrap">
+                    <img src="./images/lounge_pc.jpg" alt="KAL 라운지" />
+                    <div class="banner__text">
+                      <span>KAL 라운지</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                  <div class="banner__wrap">
+                    <img src="./images/baggage_pc.jpg" alt="위탁 수화물 계산기" />
+                    <div class="banner__text">
+                      <span>위탁 수화물 계산기</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">
+              기내
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul>
+                  <li>
+                    <h4>클래스별 서비스</h4>
+                    <ul>
+                      <li>일등석</li>
+                      <li>프레스티지석</li>
+                      <li>일반석</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>기내 서비스</h4>
+                    <ul>
+                      <li>서비스 순서</li>
+                      <li>기내식</li>
+                      <li>기내 면세품</li>
+                      <li>기내 여행 가이드</li>
+                      <li>기내 엔터테인먼트</li>
+                      <li>기내 와이파이</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>항공기 안내</h4>
+                    <ul>
+                      <li>보잉 787</li>
+                      <li>보잉 777</li>
+                      <li>보잉 747</li>
+                      <li>보잉 737</li>
+                      <li>에어버스 A380</li>
+                      <li>에어버스 A330</li>
+                      <li>에어버스 A321</li>
+                      <li>에어버스 A220</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="contents__banner">
+                  <div class="banner__wrap">
+                    <img src="./images/meal_pc.jpg" alt="기내식 메뉴 조회" />
+                    <div class="banner__text">
+                      <span>기내식 메뉴 조회</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                  <div class="banner__wrap">
+                    <img src="./images/enter_pc.jpg" alt="기내 엔터테이먼트" />
+                    <div class="banner__text">
+                      <span>기내 엔터테이먼트</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">
+              스카이패스
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul>
+                  <li>
+                    <h4>스카이패스 소개</h4>
+                    <ul>
+                      <li>회원 혜택</li>
+                      <li>가족 마일리지</li>
+                      <li>제휴사 할인</li>
+                      <li>스카이팀 공동 혜택</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>마일리지 적립</h4>
+                    <ul>
+                      <li>대한항공</li>
+                      <li>신용카드</li>
+                      <li>여행과 라이프</li>
+                      <li>제휴 항공사</li>
+                      <li>탑승 후 적립 안내</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>마일리지 사용</h4>
+                    <ul>
+                      <li>대한항공 보너스</li>
+                      <li>제휴 항공사 보너스</li>
+                      <li>마일리지 몰</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="contents__banner">
+                  <div class="banner__wrap">
+                    <img src="./images/hotpick_pc.png" alt="보너스 핫픽" />
+                    <div class="banner__text">
+                      <span>보너스 핫픽</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                  <div class="banner__wrap">
+                    <img src="./images/mall_pc.jpg" alt="마일리지 몰" />
+                    <div class="banner__text">
+                      <span>마일리지 몰</span>
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="last-menu">
+          <div class="search">
+            <span>궁금한 것을 검색해 보세요</span>
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <div class="login">
+            <a href="javascript:void(0)">로그인</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Airline Ticket -->
+  <section class="airline-ticket">
+    <div class="inner">
+      <ul class="airline-ticket__tabMenu">
+        <li class="tabMenu--active">
+          <a href="javascript:void(0)">항공권 예매</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">예약 조회</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">체크인</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">항공권 현황</a>
+        </li>
+      </ul>
+      <div class="airline-ticket__contents">
+        <div class="contents__menu">
+          <ul class="booking-btn">
+            <li class="btn--active">예매</li>
+            <li>마일리지 예매</li>
+          </ul>
+          <ul class="trip-ticket">
+            <li class="menu--active">왕복</li>
+            <li>편도</li>
+            <li>
+              <a href="javascript:void(0)">
+                다구간
+                <span class="material-symbols-outlined">chevron_right</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contents__user-info">
+          <div class="location">
+            <div class="location__departures">
+              <span>SEL</span>
+              <span>서울</span>
+            </div>
+            <span class="material-symbols-outlined">sync</span>
+            <div class="location__arrivals">
+              <span>To</span>
+              <span>도착지</span>
+            </div>
+          </div>
+          <div class="user-info">
+            <div class="departure-date">
+              <span>출발일</span>
+              <div>
+                <span class="material-symbols-outlined">calendar_month</span>
+                가는 날 ~ 오는 날
+              </div>
+            </div>
+            <div class="passengers">
+              <span>탑승객</span>
+              <div>
+                성인 1명
+                <span class="material-symbols-outlined">person</span>
+              </div>
+            </div>
+            <div class="cabin-class">
+              <span>좌석 등급</span>
+              <div>
+                선택하세요.
+                <span class="material-symbols-outlined">flight_class</span>
+              </div>
+            </div>
+            <button class="flight-search">항공편 검색</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- travel-info -->
+  <section class="travel-info">
+    <div class="inner">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="travel-info__card">
+              <div>
+                <img src="./images/shortroute202309.jpg" alt="신규 취항/운항 재개 노선 스케줄을 확인하세요." />
+              </div>
+              <p>신규 취항/운항 재개 노선 스케줄을 확인하세요.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="travel-info__card">
+              <div>
+                <img src="./images/sherpanew.jpg" alt="떠나는 목적지의 출입국 규정을 간단히 확인하세요." />
+              </div>
+              <p>떠나는 목적지의 출입국 규정을 간단히 확인하세요.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="travel-info__card">
+              <div>
+                <img src="./images/insurance_ko.jpg" alt="안전한 여행의 시작, 여행 보험 간편하게 가입하세요." />
+              </div>
+              <p>안전한 여행의 시작, 여행 보험 간편하게 가입하세요.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="travel-info__card">
+              <div>
+                <img src="./images/giftcard_202310_.png" alt="대한항공 기프트카드로 여행을 선물하세요." />
+              </div>
+              <p>대한항공 기프트카드로 여행을 선물하세요.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="travel-info__card">
+              <div>
+                <img src="./images/koreanaircard_29aug.jpg" alt="쌓이는 속도가 다르다! 대한항공카드 혜택 알아보기" />
+              </div>
+              <p>쌓이는 속도가 다르다! 대한항공카드 혜택 알아보기</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-prev">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </div>
+      <div class="swiper-next">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- notice -->
+  <section class="notice">
+    <div class="inner">
+      <div class="notice__title">
+        <h2>알려드립니다</h2>
+        <a href="javascrip:void(0)">목록보기</a>
+      </div>
+      <div class="notice__list">
+        <ul>
+          <li>
+            <p>2024년 대한항공 몰스킨 다이어리 출시</p>
+            <span>2023.11.21.</span>
+          </li>
+          <li>
+            <p>타이중 노선 한시 운항</p>
+            <span>2023.11.21.</span>
+          </li>
+          <li>
+            <p>마일리지 유효기간 안내</p>
+            <span>2023.11.21.</span>
+          </li>
+          <li>
+            <p>2023년 동계 코트룸 서비스 시행 (12/1일 부)</p>
+            <span>2023.11.20.</span>
+          </li>
+        </ul>
+        <img src="./images/A_PC.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- travel-guide -->
+  <section class="travel-guide">
+    <div class="inner">
+      <h2>여행의 완성을 위한 경험</h2>
+      <ul class="guide__wrap">
+        <li class="guide__contents">
+          <p>대한항공카드</p>
+          <img src="./images/masl__credit-card-pc.png" alt="대한항공카드">
+          <div>
+            <a href="javascrip:void(0)">대힌항공카드</a>
+          </div>
+        </li>
+        <li class="guide__contents">
+          <p>호텔</p>
+          <img src="./images/masl__hotel-pc.png" alt="호텔" />
+          <div>
+            <a href="javascrip:void(0)">아고다</a>
+            <a href="javascrip:void(0)">Hostels.com</a>
+          </div>
+        </li>
+        <li class="guide__contents">
+          <p>렌터카</p>
+          <img src="./images/masl__rental-car-pc.png" alt="렌터카" />
+          <div>
+            <a href="javascrip:void(0)">Hertz</a>
+            <a href="javascrip:void(0)">SK렌터카</a>
+            <a href="javascrip:void(0)">롯데렌터카</a>
+          </div>
+        </li>
+        <li class="guide__contents">
+          <p>기내면세점</p>
+          <img src="./images/masl__duty-free-pc.png" alt="기내면세점" />
+          <div>
+            <a href="javascrip:void(0)">SKYSHOP</a>
+          </div>
+        </li>
+        <li class="guide__contents">
+          <p>여행자 보험</p>
+          <img src="./images/masl__insurance-pc.png" alt="여행자 보험" />
+          <div>
+            <a href="javascrip:void(0)">Chubb 여행보험</a>
+          </div>
+        </li>
+        <li class="guide__contents">
+          <p>여행 상품</p>
+          <img src="./images/masl__guide-book-pc.png" alt="여행 상품" />
+          <div>
+            <a href="javascrip:void(0)">한진관광</a>
+            <a href="javascrip:void(0)">KALPAK</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- lnb -->
+  <section class="lnb">
+    <div class="inner">
+      <ul class="lnb__menu">
+        <li>
+          <h5>회사소개</h5>
+          <ul>
+            <li>대한항공에 대하여</li>
+            <li>기업지배구조</li>
+            <li>투자정보</li>
+            <li>지속가능경영</li>
+            <li>뉴스룸</li>
+          </ul>
+        </li>
+        <li>
+          <h5>고객지원</h5>
+          <ul>
+            <li>공지사항</li>
+            <li>고객의 말씀</li>
+            <li>서비스 센터</li>
+            <li>e-서식함</li>
+            <li>웹 접근성</li>
+          </ul>
+        </li>
+        <li>
+          <h5>약관 및 규정</h5>
+          <ul>
+            <li>개인정보 처리방침</li>
+            <li>이용 약관</li>
+            <li>운송약관 및 고지사항</li>
+            <li>소비자 안전 관련 정보</li>
+            <li>운임 및 서비스 요금표</li>
+          </ul>
+        </li>
+        <li>
+          <h5>기타 안내</h5>
+          <ul>
+            <li>기업 출장 여행</li>
+            <li>고객 안내 서비스</li>
+            <li>항공교통이용자 서비스 계획</li>
+            <li>항공교통이용자 피해 구제</li>
+            <li>관련 사이트</li>
+            <li>사이트맵</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="lnb__banner">
+        <ul class="sns">
+          <li>
+            <img src="./images/sns__link--youtube.svg" alt="유튜브" />
+          </li>
+          <li>
+            <img src="./images/sns__link--instagram.svg" alt="인스타그램" />
+          </li>
+          <li>
+            <img src="./images/sns__link--facebook.svg" alt="페이스북" />
+          </li>
+          <li>
+            <img src="./images/sns__link--twitter.svg" alt="트위터" />
+          </li>
+        </ul>
+        <ul class="app-store">
+          <li>
+            <img src="./images/banner-googleplay.png" alt="구글플레이" />
+          </li>
+          <li>
+            <img src="./images/banner-appstore.png" alt="애플앱스토어" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="inner">
+      <div class="company-info">
+        <h5>(주) 대한항공</h5>
+        <span class="blind">대표 : 우기홍 외 1명</span>
+        <span>주소 : 서울특별시 강서구 하늘길 260</span>
+        <span>전화 : 1588-2001 / 02-2656-2001</span>
+        <br />
+        <span class="blind">사업자등록번호 : 110-81-14794</span>
+        <span>통신판매업신고 : 강서 제 16-3010</span>
+        <span>개인정보보호책임자 : 장성현 대한항공 부사장</span>
+      </div>
+      <p class="copyright">
+        &copy; 1997-<span class="this-year"></span> KOREAN AIR
+      </p>
+    </div>
+  </footer>
+
+  <div id="top-btn">
+    <span class="material-symbols-outlined">arrow_upward_alt</span>
+  </div>
+
+  <div id="floating_btn">
+    <span class="material-symbols-outlined">add</span>
+  </div>
+
+</body>
+</html>
